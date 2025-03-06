@@ -1,0 +1,38 @@
+{% render 'partials/head.liquid' %}
+
+<header>
+    <nav>
+    <ul>
+        <li>
+            <img class="qatar-logo" src="assets/Qatar-museums-logo.png" alt="Qatar museums logo">
+            <a href="">مـتــاحـف قـطــر <br>Qatar Museums</a>
+        </li>
+
+        <li>
+            <a href="">قــصـص<br>STORIES</a>
+        </li>        
+        <li>
+            <a href="">ماهوالجديد<br>
+                WHAT'S ON</a>
+        </li>        
+        <li>
+            <a href="">الـمـجـمـوعــة<br>
+                COLLECTION</a>
+        </li>        
+        <li>
+            <a href="">زيـارة<br>
+                VISIT</a>
+        </li>        
+
+
+    </ul>
+    </nav>
+</header>
+
+{% for artwork in artworks %}
+    <div class="image-card">
+      <img src="https://fdnd-agency.directus.app/assets/{{ artwork.image }}" alt="">
+    </div>
+  {% endfor %}
+
+  {% render 'partials/foot.liquid' %}
