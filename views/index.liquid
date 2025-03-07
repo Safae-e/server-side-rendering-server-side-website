@@ -2,37 +2,51 @@
 
 <header>
     <nav>
-    <ul>
-        <li>
-            <img class="qatar-logo" src="assets/Qatar-museums-logo.png" alt="Qatar museums logo">
-            <a href="">مـتــاحـف قـطــر <br>Qatar Museums</a>
+    <ul class="nav-bar">
+        <li >
+            <img class="qatar-logo" src="assets/Qatar-museums-Logo (2).png" alt="Qatar museums logo">
         </li>
 
-        <li>
+        <li class="nav-links">
             <a href="">قــصـص<br>STORIES</a>
         </li>        
-        <li>
+        <li class="nav-links">
             <a href="">ماهوالجديد<br>
                 WHAT'S ON</a>
         </li>        
-        <li>
+        <li class="nav-links">
             <a href="">الـمـجـمـوعــة<br>
                 COLLECTION</a>
         </li>        
-        <li>
+        <li class="nav-links">
             <a href="">زيـارة<br>
                 VISIT</a>
-        </li>        
+        </li>    
+        
+        <li class="nav-links">
+            <a href="">Tickets</a>
+        </li>
 
+        <li class="nav-links">
+            <a href="">Members</a>
+        </li>
 
+        <li class="nav-links">
+            <a href="">Venues</a>
+        </li>
+
+        <button class="menu-button">Menu</button>
     </ul>
     </nav>
 </header>
 
-{% for artwork in artworks %}
-    <div class="image-card">
-      <img src="https://fdnd-agency.directus.app/assets/{{ artwork.image }}" alt="">
-    </div>
-  {% endfor %}
-
-  {% render 'partials/foot.liquid' %}
+     <ul class="card-container">  
+        {% for artwork in artworks %}
+            <li class="">
+                <div class="image-card">
+                <img class="image" src="https://fdnd-agency.directus.app/assets/{{ artwork.image }}" alt="">
+                </div>
+            </li>
+          {% endfor %}
+      </ul> 
+          {% render 'partials/foot.liquid' %}
