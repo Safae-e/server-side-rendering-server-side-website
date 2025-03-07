@@ -34,7 +34,7 @@ a {
 }
 
 /* 520px */
-@media (min-width:520px) {
+@media (min-width:500px) {
     .card-container {
         display: grid;
         grid-template-columns: 1fr 1fr ;
