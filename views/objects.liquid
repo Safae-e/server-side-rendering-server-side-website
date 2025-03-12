@@ -1,12 +1,16 @@
 {% render 'partials/head.liquid' %}
+{% render 'partials/header.liquid' %}
 
+<section class="art-section">
+
+<a class="back-button" href="/">BACK </a>
 {% if object.image %}
-    <img class="object-object" src="https://fdnd-agency.directus.app/assets/{{ object.image }}" alt="images of object in qatar " width="300px">        
-    {% comment %} <h1>{{ object.title }}</h1> {% endcomment %}
+    <img class="object-id" src="https://fdnd-agency.directus.app/assets/{{ object.image }}" alt="images of object in qatar " width="300px">        
 
 {% else %}
     <p>No image availible</p>
 {% endif %}
+</section>
 
-{{ object.title }}
+<h1>{{ object.title }}</h1>
 {% render 'partials/foot.liquid' %}
