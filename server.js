@@ -43,6 +43,20 @@ app.get('/', async function (request, response) {
    response.render('index.liquid', { artworks: apiResponseJSON.data});
 })
 
+// app.use((req, res, next) => {
+//   res.status(404).send("Sorry can't find that!")
+// })
+
+app.get('/object/:id/', async function (request, response) {
+  const artworkId = request.params.id;
+  const apiResponse = await fetch(`https://fdnd-agency.directus.app/items/fabrique_art_objects/${artworkId}?fields=title,image`
+  );
+  const apiResponseJSON = await apiResponse.json();
+  console.log(apiResponse);  
+
+  response.render('objects.liquid', {object: apiResponseJSON.data});
+})
+
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
 // Hier doen we nu nog niets mee, maar je kunt er mee spelen als je wilt
 app.post('/', async function (request, response) {
@@ -50,6 +64,7 @@ app.post('/', async function (request, response) {
   // Er is nog geen afhandeling van een POST, dus stuur de bezoeker terug naar /
   response.redirect(303, '/')
 })
+
 
 // Stel het poortnummer in waar Express op moet gaan luisteren
 // Lokaal is dit poort 8000, als dit ergens gehost wordt, is het waarschijnlijk poort 80

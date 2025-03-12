@@ -8,34 +8,34 @@
         </li>
 
         <li class="nav-links">
-            <a href="">قــصـص<br>STORIES</a>
+            <a href="">{{ "stories" |  prepend: 'قــصـص' | upcase }}</a> 
         </li>        
         <li class="nav-links">
             <a href="">ماهوالجديد<br>
-                WHAT'S ON</a>
+               {{ "what's on" |  upcase }}</a>
         </li>        
         <li class="nav-links">
             <a href="">الـمـجـمـوعــة<br>
-                COLLECTION</a>
+            {{ "collection" |  upcase }}</a>
         </li>        
         <li class="nav-links">
             <a href="">زيـارة<br>
-                VISIT</a>
+            {{ "visit" |  upcase }}</a>
         </li>    
         
         <li class="nav-links">
-            <a href="">Tickets</a>
+            <a href=""> {{ "tickets" |  upcase }}</a>
         </li>
 
         <li class="nav-links">
-            <a href="">Members</a>
+            <a href=""> {{ "members" |  upcase }}</a>
         </li>
 
         <li class="nav-links">
-            <a href="">Venues</a>
+            <a href="">{{  "Venues" |  upcase}}</a>
         </li>
 
-        <button class="menu-button">Menu</button>
+        <button class="menu-button"> {{ "menu" |  upcase }}</button>
     </ul>
     </nav>
 </header>
@@ -43,9 +43,11 @@
      <ul class="card-container">  
         {% for artwork in artworks %}
             <li class="">
+                <a href="/object/{{ artwork.id }}">
                 <div class="image-card">
                 <img class="image" src="https://fdnd-agency.directus.app/assets/{{ artwork.image }}" alt="">
                 </div>
+                </a>
             </li>
           {% endfor %}
       </ul> 

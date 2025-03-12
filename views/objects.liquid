@@ -1,0 +1,12 @@
+{% render 'partials/head.liquid' %}
+
+{% if object.image %}
+    <img class="object-object" src="https://fdnd-agency.directus.app/assets/{{ object.image }}" alt="images of object in qatar " width="300px">        
+    {% comment %} <h1>{{ object.title }}</h1> {% endcomment %}
+
+{% else %}
+    <p>No image availible</p>
+{% endif %}
+
+{{ object.title }}
+{% render 'partials/foot.liquid' %}
