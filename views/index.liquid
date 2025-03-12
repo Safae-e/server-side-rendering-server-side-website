@@ -1,14 +1,14 @@
 {% render 'partials/head.liquid' %}
 
 <header>
-    <nav>
+    <nav class="navigation">
+        <div class="qatar-logo" >          
+         <img src="assets/Qatar-museums-Logo (2).png" alt="Qatar museums logo">
+        </div>
     <ul class="nav-bar">
-        <li >
-            <img class="qatar-logo" src="assets/Qatar-museums-Logo (2).png" alt="Qatar museums logo">
-        </li>
-
+       
         <li class="nav-links">
-            <a href="">{{ "stories" |  prepend: 'قــصـص' | upcase }}</a> 
+            <a href="">قــصـص<br>{{ "stories" |  upcase }}</a> 
         </li>        
         <li class="nav-links">
             <a href="">ماهوالجديد<br>

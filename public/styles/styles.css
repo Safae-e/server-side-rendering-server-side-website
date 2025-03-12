@@ -1,25 +1,33 @@
 /* Mobiele versie */
-.nav-bar {
-    font-family: "DIN Next LT Pro", sans-serif;
-    list-style-type:none;
-    position: fixed;
-    top: 0;
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    /* position: fixed; */
     background-color: white;
+}
+
+.qatar-logo {
+    justify-content: flex-start;
+}
+
+.nav-bar {
+    list-style-type:none;
     display:flex;
-    margin-top: 0;
-    width: 100%;
-    padding: 10px;
-    /* display: inline; */
+    justify-content: flex-end;
+    column-gap: 1em;
+    /* align-items: inherit; */
 }
 
 .nav-links {
     display: none;
 
     /* tablet versie */
-    @media (min-width:750px) {
+    @media (min-width:960px) {
         display:inline-flex;
         align-items: center;
-        float: right;
     }
 }
 
