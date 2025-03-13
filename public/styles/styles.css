@@ -108,5 +108,17 @@ a {
     width: 600px; /* Breedte instellen */
     height: 45vw;
     object-fit: cover;   
-   
+}
+
+form {
+    position: fixed;
+    bottom: 1em;
+    right: 50%;
+    cursor: pointer;
+}
+
+input {
+    width: 250%;
+    border-radius: 4px ;
+    padding: .5em;
 }
