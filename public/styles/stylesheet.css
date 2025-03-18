@@ -35,4 +35,10 @@ body {
 --font-pro-light: "Din Next lt pro light", sans-serif;
 --font-pro-regular: "Din Next lt pro regular", sans-serif;
 --font-pro-bold: "Din Next lt pro bold", sans-serif;
+
+/* colors */
+--background-color: white;
+--font-color: #000;
+--nav-highlight: #F9FF1E;
+--detail-background-color: #464646;
 }
